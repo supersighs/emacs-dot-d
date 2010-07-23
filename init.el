@@ -74,5 +74,6 @@
 (if (file-exists-p user-specific-dir)
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
-(load-library "tommy-theme")
+
+(load-library "tommy-stuff")
 ;;; init.el ends here

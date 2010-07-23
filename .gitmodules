@@ -1,3 +1,3 @@
-[submodule "Pymacs"]
-	path = Pymacs
+[submodule "vendor/Pymacs"]
+	path = vendor/Pymacs
 	url = http://github.com/pinard/Pymacs.git
