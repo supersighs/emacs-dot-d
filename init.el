@@ -76,4 +76,5 @@
 
 
 (load-library "tommy-stuff")
+(setenv "PATH" (concat "/usr/local/bin/" path-separator (getenv "PATH")))
 ;;; init.el ends here

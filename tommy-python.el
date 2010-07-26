@@ -12,4 +12,7 @@
 
 (ac-ropemacs-setup)
 
+(add-hook 'python-mode-hook
+  (lambda() (linum-mode 1)))
+
 (provide 'tommy-python)
