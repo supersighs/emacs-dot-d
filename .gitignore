@@ -6,5 +6,5 @@ places
 *.elc
 *.pyc
 *.dat
-/tommy-gnus.el
-/vendor/flyspell.el
+
+
