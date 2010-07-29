@@ -16,6 +16,9 @@
 (setq display-time-24hr-format nil)
 (display-time)
 
+;; font
+(set-face-attribute 'default nil :height 100)
+
 (load-library "tommy-gnus")
 (load-library "tommy-theme")
 (load-library "mako")
