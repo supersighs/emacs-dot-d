@@ -3,8 +3,13 @@
 
 (require 'textmate)
 (require 'maxframe)
+(require 'yasnippet)
+
 
 (textmate-mode)
+
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet-0.5.9/snippets")
 (add-hook 'window-setup-hook 'maximize-frame t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -17,13 +22,21 @@
 (display-time)
 
 ;; font
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 120)
 
 (load-library "tommy-gnus")
 (load-library "tommy-theme")
 (load-library "mako")
 (load-library "tommy-autocomplete")
-(load-library "tommy-python")
+(load-library "tommy-php")
+;;(load-library "tommy-python")
+(load-library "javascript")
 
 
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+                `((".*" ,temporary-file-directory t)))
 
+(require 'whitespace)
+(add-hook 'python-mode-hook 'whitespace-mode)
