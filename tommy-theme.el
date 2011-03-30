@@ -22,16 +22,64 @@
      (font-lock-warning-face ((t (:foreground "Red" :bold t)))))))
 (provide 'color-theme-donger)
 
+(defun color-theme-donger-light ()
+  (interactive)
+  (color-theme-install
+   '(color-theme-donger-light
+     ((background-color . "#ffffff")
+      (background-mode . light)
+      (border-color . "#f2f2f2")
+      (cursor-color . "#333333")
+      (foreground-color . "#000000")
+      (mouse-color . "black"))
+     (fringe ((t (:background "#f2f2f2"))))
+     (mode-line ((t (:foreground "#7419a9" :background "#c9c9c9"))))
+     (region ((t (:background "#c7c6c6"))))
+     (font-lock-builtin-face ((t (:foreground "#e57f2a"))))
+     (font-lock-comment-face ((t (:foreground "#bfbfbf"))))
+     (font-lock-function-name-face ((t (:foreground "#00b0fa"))))
+     (font-lock-keyword-face ((t (:foreground "#2349b8"))))
+     (font-lock-string-face ((t (:foreground "#d572be"))))
+     (font-lock-type-face ((t (:foreground "#20bc40"))))
+     (font-lock-variable-name-face ((t (:foreground "#d72d2d"))))
+     (minibuffer-prompt ((t (:foreground "#7299ff" :bold t))))
+     (font-lock-warning-face ((t (:foreground "Red" :bold t)))))))
+(provide 'color-theme-donger-light)
+
+
+(defun color-theme-donger-disco ()
+  (interactive)
+  (color-theme-install
+   '(color-theme-donger-disco
+     ((background-color . "#000000")
+      (background-mode . light)
+      (border-color . "#1a1a1a")
+      (cursor-color . "#fce94f")
+      (foreground-color . "#eeeeec")
+      (mouse-color . "black"))
+     (fringe ((t (:background "#1a1a1a"))))
+     (mode-line ((t (:foreground "#eeeeec" :background "#555753"))))
+     (region ((t (:background "#242424"))))
+     (font-lock-builtin-face ((t (:foreground "#49b540"))))
+     (font-lock-comment-face ((t (:foreground "#888a85"))))
+     (font-lock-function-name-face ((t (:foreground "#ed7300"))))
+     (font-lock-keyword-face ((t (:foreground "#4168af"))))
+     (font-lock-string-face ((t (:foreground "#f32066"))))
+     (font-lock-type-face ((t (:foreground "#8ae234"))))
+     (font-lock-variable-name-face ((t (:foreground "#eeeeec"))))
+     (minibuffer-prompt ((t (:foreground "#5df4e5" :bold t))))
+     (font-lock-warning-face ((t (:foreground "Red" :bold t)))))))
+(provide 'color-theme-donger-disco)
 
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
-     (color-theme-donger)))
+     (color-theme-donger-disco)))
 
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
- (set-frame-parameter (selected-frame) 'alpha '(90 80))
-(add-to-list 'default-frame-alist '(alpha 90 80))
+ (set-frame-parameter (selected-frame) 'alpha '(100 80))
+(add-to-list 'default-frame-alist '(alpha 100 80))
 
 (eval-when-compile (require 'cl))
  (defun toggle-transparency ()
@@ -39,6 +87,6 @@
    (if (/=
         (cadr (frame-parameter nil 'alpha))
         100)
-       (set-frame-parameter nil 'alpha '(100 100))
-     (set-frame-parameter nil 'alpha '(85 50))))
+       (set-frame-parameter nil 'alpha '(100 80))
+     (set-frame-parameter nil 'alpha '(90 50))))
  (global-set-key (kbd "C-c t") 'toggle-transparency)
