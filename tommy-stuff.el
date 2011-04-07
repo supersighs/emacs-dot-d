@@ -29,7 +29,7 @@
 (load-library "mako")
 (load-library "tommy-autocomplete")
 (load-library "tommy-php")
-;;(load-library "tommy-python")
+(load-library "tommy-python")
 (load-library "javascript")
 
 
@@ -40,3 +40,11 @@
 
 (require 'whitespace)
 (add-hook 'python-mode-hook 'whitespace-mode)
+
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-jabber")
+;; For 0.7.1 and below:
+(require 'jabber)
+;; For 0.7.90 and above:
+(require 'jabber-autoloads)
+
+(setq rcirc-default-nick "_tommyk")
