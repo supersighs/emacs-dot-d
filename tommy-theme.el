@@ -166,6 +166,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
+     (setq term-default-bg-color nil)
      (color-theme-initialize)
      (color-theme-solarized-dark)))
 

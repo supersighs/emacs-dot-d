@@ -29,7 +29,7 @@
 (load-library "mako")
 (load-library "tommy-autocomplete")
 (load-library "tommy-php")
-(load-library "tommy-python")
+(load-library "init-python")
 (load-library "javascript")
 
 
